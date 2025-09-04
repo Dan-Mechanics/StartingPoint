@@ -954,8 +954,8 @@ void RenderDrawLists(ImDrawData* draw_data)
 
     const ImGuiIO& io = ImGui::GetIO();
 
-    // Pretentious Prikc !
-    //assert(io.Fonts->TexID != (ImTextureID) nullptr); // You forgot to create and set font texture
+    // Dan-Mechanics change here (3-9-2025):
+    // assert(io.Fonts->TexID != (ImTextureID) nullptr); // You forgot to create and set font texture
 
     // Avoid rendering when minimized, scale coordinates for retina displays (screen coordinates !=
     // framebuffer coordinates)
