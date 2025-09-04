@@ -1,5 +1,4 @@
-﻿  imgui-SFML.cpp
-  main.cpp
+﻿  main.cpp
 C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\libraries\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'main.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdexcept(100,30):
@@ -7,5 +6,4 @@ C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\libraries\
       C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\libraries\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-  Generating Code...
   StartingPoint.vcxproj -> C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\x64\Debug\StartingPoint.exe
