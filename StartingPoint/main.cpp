@@ -31,7 +31,7 @@ int main()
     )); // Color circle
     shape.setOrigin({ circleRadius, circleRadius });
     shape.setPosition({400, 400}); // Center circle
-
+       
     sf::Clock deltaClock;
     while (window.isOpen())
     {
