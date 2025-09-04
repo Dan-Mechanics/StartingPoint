@@ -65,8 +65,10 @@ int main()
         )); // Color circle
 
         window.clear(sf::Color(18, 33, 43)); // Color background
+
         if (circleExists)
             window.draw(shape);
+
         ImGui::SFML::Render(window);
         window.display();
     }
