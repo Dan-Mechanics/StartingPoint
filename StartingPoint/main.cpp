@@ -1,3 +1,11 @@
+// todo:
+// try to make stuff work with paginas --> alle weegave --> command line tool ( eerst moet je goede cmake prolly 3.5 instlleren )
+// volgens alle shit doen
+// ander idee: check de versies van de github zoals in mail
+// volg video om bit memes te doen
+// doe bitmask operations and but bullshit bit operatorss --> solve the puzzle in the slide
+// what je nu hebt is meer dan goed genoeg maar ik wil MEEEEER !!! yaaarrr  --> dus je kan basically dit al inleveren
+
 #include "CircleEditor.h"
 #include "BlackScreen.h"
 
@@ -17,9 +25,31 @@ struct myStruct {
 // je kan 8 bools met 1 byte ofzo. makes sense.
 #pragma pack(push, 0)
 // een bool neemt een hele byte in beslag voor 1 bit aan info.
+// single bool is ineffecient want 
+// & is sneller als bitwise if statement als de bits completely op de zelfde plek zijn want het is sneller.
+// dit is handig booleans gaan vervangen
+
+// pState = 5
+// pState & FALLING
+// typedef long long uint_64_t --> en dan in andere environment anders schriven is handig networking W
+// truth tables
+// bitmask collision, een enkele bit met elkaar vergelekn net zolang hele bitmask.
+// bitlemon bitwiae operations:the most undereapced feature low level program
+// leuke huiswerk: shift left en shift right operator << 2 = keer 4, heel snelle rekensommen.
+// naar rechts shift raak je informatie kwijt en naar links niet, unless data type ophoud, daar kun je hele efficente shit te maken.
+// leuk detail
+// bits leren lezen W  XOR = !=
+// cool way to swap variables with bits in the slide with no temp var.
+
+
+// check huiswerk en i int kun je 32 booleans vervangen, want alles is alle.s als je optimzailseer voor size is lezen langzER ER VISa versa
+// bitwise operators reten snel. dus bitwise operators zijn de bom. memeory-optimzed, vs of je wilt meer fps right.
+// het liefst allebei, framerate en memory, geheugen ophalen is traag ish.
 struct BadEntity1 {
     unsigned int health;
-    bool active, can_move, visible;
+    //bool active, can_move, visible;
+    // bitewise operators.
+    char somebools;
 
     double precise_x;
     double preicse_y;
