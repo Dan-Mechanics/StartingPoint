@@ -14,6 +14,43 @@ struct myStruct {
     int myInt;
 };
 
+// je kan 8 bools met 1 byte ofzo. makes sense.
+#pragma pack(push, 0)
+// een bool neemt een hele byte in beslag voor 1 bit aan info.
+struct BadEntity1 {
+    unsigned int health;
+    bool active, can_move, visible;
+
+    double precise_x;
+    double preicse_y;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+// een bool neemt een hele byte in beslag voor 1 bit aan info.
+struct BadEntity2 {
+    bool active;
+    double precise_x;
+    bool visible;
+    double preicse_y;
+    int health;
+    bool can_move;
+};
+#pragma pack(pop)
+#pragma pack(push, 8)
+// een bool neemt een hele byte in beslag voor 1 bit aan info.
+struct BadEntity3 {
+    bool active;
+    double precise_x;
+    bool visible;
+    double preicse_y;
+    int health;
+    bool can_move;
+};
+
+#pragma pack(pop)
+
 /// <summary>
 /// https://www.geeksforgeeks.org/cpp/cpp-polymorphism/
 /// </summary>
@@ -48,14 +85,21 @@ int main() {
         // 
         // .
         // 
-        std::cout << std::hex << (int)bytes[i] << " ";
+       
+        // std: hex is permannet meme.
+        //std::cout << std::hex << (int)bytes[i] << " ";
     }
-    std::cout << std::endl << sizeof(myStruct);
-    std::cout << std::endl << offsetof(myStruct, a);
-    std::cout << std::endl << offsetof(myStruct, b);
-    std::cout << std::endl << offsetof(myStruct, c);
-    std::cout << std::endl << offsetof(myStruct, a);
-    std::cout << std::endl << offsetof(myStruct, a);
+
+    std::cout << std::endl << sizeof(BadEntity1) << std::endl;
+    std::cout << sizeof(BadEntity2) << std::endl;
+    std::cout << sizeof(BadEntity3) << std::endl;
+
+   // std::cout << std::endl << sizeof(myStruct);
+   // std::cout << std::endl << offsetof(myStruct, a);
+   // std::cout << std::endl << offsetof(myStruct, b);
+   // std::cout << std::endl << offsetof(myStruct, c);
+   // std::cout << std::endl << offsetof(myStruct, a);
+   // std::cout << std::endl << offsetof(myStruct, a);
     
     // je wilt liever niet dat je 8 
     // kleiner maken van de data, minder vaak data hoeven te lezen
