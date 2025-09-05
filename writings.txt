@@ -1,3 +1,10 @@
+note to self: je moet ook de release en debug dlls in de shit hebben.
+so like nice.
+
+given dat je de EXE WIlt shippen bascially.
+
+...
+
 ik wil aan aaron vragen hoe hij de setup deed
 local folder ??
 
