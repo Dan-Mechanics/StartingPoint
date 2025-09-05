@@ -1,3 +1,80 @@
+ik wil aan aaron vragen hoe hij de setup deed
+local folder ??
+
+wat zijn words?
+words zijn afhankelijk van je architectuur
+hoe je os praat met de arhcitectuur
+64 bit word size, klinkt als machine code.
+
+
+cpu of operation system voor words
+
+64 bit is 8 byte pointer ( point to a memory )
+32 big games zijn better, afhnaejlijk hoeveel shit je kan hebben
+
+getal to de nul is altijd 1
+
+68 69 20 6d 6f 6d
+
+a-f = 10-15
+
+gobal and static
+
+
+heap is not preallocated
+stack is .
+
+memory chunk.
+
+we only store the memory address in the stack ( this is useful )
+je pointers zijn op de stack
+
+EEN pointer is basically een proxy.
+
+goed om je SSDs ff te chekcne.
+sebastion league my goat
+
+waar bestaan je SSDs uit?
+NandFLash ??
+
+als je eigenlij goed wilt worden C++ gewoon duizend programs schrijven yo, en games
+
+
+DDR SDRAM
+
+
+
+byte char signed unsigned short int long float bool etc
+
+cpp referene
+
+rule of thumb, use the smallest type possible
+heap and stack: all uses power
+
+
+if you make too much money, it wraps around, this is why you need
+to do units tests i guess
+
+een string is een zoorthe characers
+char = 1 byte
+
+utf hex numbers to characters meme
+
+encoding is heel leuk, not
+
+work smarter not harder.
+
+an adres is a number in hex code
+
+Big endian is grooste aan het begun
+
+"environment" little endian big endion.
+belangrijk voor networking games deze difference.
+
+
+
+===
+
 visual c++ 17 ( 2022 )
 sfml 3 voor visual c++ 17 ( 2022 )
 newest IMGUI
