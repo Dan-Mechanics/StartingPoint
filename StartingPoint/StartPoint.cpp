@@ -1,10 +1,13 @@
 #include "StartPoint.h"
 
+#define IMGUI_DEFINE_MATH_OPERATORS // Access to math operators
 #include "imgui.h"
 #include "imgui-SFML.h"
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+
+#include "imdrawlist_party.cpp"
 
 StartPoint::StartPoint() = default;
 
@@ -38,6 +41,7 @@ int StartPoint::run() const {
 
         // Update
         ImGui::SFML::Update(window, deltaClock.restart());
+        FxTestBed();
         ImGui::ShowDemoWindow();
 
         // Render

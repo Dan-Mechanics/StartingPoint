@@ -1,2 +1,16 @@
-﻿  main.cpp
+﻿  StartPoint.cpp
+C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\libraries\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'StartPoint.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdexcept(100,30):
+      see declaration of 'std::runtime_error'
+      C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\libraries\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\fx.inl(21,10): warning C4244: '=': conversion from '_Ty' to 'float', possible loss of data
+C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\fx.inl(21,10): warning C4244:         with
+C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\fx.inl(21,10): warning C4244:         [
+C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\fx.inl(21,10): warning C4244:             _Ty=int
+C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\fx.inl(21,10): warning C4244:         ]
+  (compiling source file 'StartPoint.cpp')
+  
   StartingPoint.vcxproj -> C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\x64\Debug\StartingPoint.exe
