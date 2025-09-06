@@ -1,44 +1,17 @@
-#include "imgui.h"
-#include "imgui-SFML.h"
+#include "StartPoint.h"
+#include "CircleEditor.h"
 
-#include <SFML/Graphics.hpp>
-
-#include <iostream>
-
+/// <summary>
+/// https://www.geeksforgeeks.org/cpp/cpp-polymorphism/
+/// </summary>
 int main() {
-    sf::RenderWindow window;
-    window.create(sf::VideoMode({ 1280, 720 }), "My window");
-    window.setFramerateLimit(60);
-    window.setVerticalSyncEnabled(true);
+    // This way you can "easily" swap the apps.
+    App* appPtr;
 
-    if (!ImGui::SFML::Init(window))
-        return -1;
+    CircleEditor circleEditor{};
+    //StartPoint startPoint{};
 
-    sf::Clock deltaClock;
-    while (window.isOpen())
-    {
-        // Event Polling
-        while (const std::optional event = window.pollEvent())
-        {
-            ImGui::SFML::ProcessEvent(window, *event);
+    appPtr = &circleEditor;
 
-            // "close requested" event: we close the window
-            if (event->is<sf::Event::Closed>())
-                window.close();
-        }
-
-        // Update
-        ImGui::SFML::Update(window, deltaClock.restart());
-       // std::cout << ImGui::GetVersion() << std::endl;
-        ImGui::ShowDemoWindow();
-
-        // Render
-        window.clear();
-
-        ImGui::SFML::Render(window);
-
-        window.display();
-    }
-
-    return 0;
+    return appPtr->run();
 }
