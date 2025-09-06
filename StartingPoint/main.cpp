@@ -1,18 +1,42 @@
-#include "SFML/Graphics.hpp"
+#include "imgui.h"
+#include "imgui-SFML.h"
 
-int main()
-{
-    sf::RenderWindow window(sf::VideoMode({ 800, 800 }), "Window Title");
-    sf::CircleShape shape(200.f, 100);
-    shape.setFillColor(sf::Color(204, 77, 5)); // Color circle
-    shape.setPosition({ 200, 200 }); // Center circle
+#include <SFML/Graphics.hpp>
 
+#include <iostream>
+
+int main() {
+    sf::RenderWindow window;
+    window.create(sf::VideoMode({ 1280, 720 }), "My window");
+    window.setFramerateLimit(60);
+    window.setVerticalSyncEnabled(true);
+
+    if (!ImGui::SFML::Init(window))
+        return -1;
+
+    sf::Clock deltaClock;
     while (window.isOpen())
     {
-        
+        // Event Polling
+        while (const std::optional event = window.pollEvent())
+        {
+            ImGui::SFML::ProcessEvent(window, *event);
 
-        window.clear(sf::Color(18, 33, 43)); // Color background
-        window.draw(shape);
+            // "close requested" event: we close the window
+            if (event->is<sf::Event::Closed>())
+                window.close();
+        }
+
+        // Update
+        ImGui::SFML::Update(window, deltaClock.restart());
+       // std::cout << ImGui::GetVersion() << std::endl;
+        ImGui::ShowDemoWindow();
+
+        // Render
+        window.clear();
+
+        ImGui::SFML::Render(window);
+
         window.display();
     }
 
