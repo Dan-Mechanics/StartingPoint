@@ -182,7 +182,7 @@
     <ClCompile Include="StartPoint.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fx.inl" />
+    <None Include="rain.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

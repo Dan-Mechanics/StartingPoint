@@ -43,6 +43,7 @@ int StartPoint::run() const {
         ImGui::SFML::Update(window, deltaClock.restart());
         FxTestBed();
         ImGui::ShowDemoWindow();
+        FxTestBed2();
 
         // Render
         window.clear();
