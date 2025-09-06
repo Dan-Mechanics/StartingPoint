@@ -4,6 +4,7 @@
 #include "imgui-SFML.h"
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 BlackScreen::BlackScreen() = default;
 
@@ -29,9 +30,11 @@ int BlackScreen::run() const {
                 window.close();
         }
 
+        std::cout << ImGui::GetVersion() << std::endl;
+
         // Update
         ImGui::SFML::Update(window, deltaClock.restart());
-        // ImGui::ShowDemoWindow();
+        //ImGui::ShowDemoWindow();
 
         // Render
         window.clear();
