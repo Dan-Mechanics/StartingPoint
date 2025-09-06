@@ -8,10 +8,10 @@ int main() {
     // This way you can "easily" swap the apps.
     App* appPtr;
 
-    CircleEditor circleEditor{};
-    //StartPoint startPoint{};
+    //CircleEditor circleEditor{};
+    StartPoint startPoint{};
 
-    appPtr = &circleEditor;
+    appPtr = &startPoint;
 
     return appPtr->run();
 }
