@@ -1,5 +1,5 @@
 #include <math.h>
-//#define IMGUI_DEFINE_MATH_OPERATORS // Access to math operators
+#define IMGUI_DEFINE_MATH_OPERATORS // Access to math operators
 #include "imgui.h"
 #include "imgui_internal.h"
 #include "rain.inl" 

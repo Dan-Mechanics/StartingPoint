@@ -8,7 +8,7 @@ int main() {
     // This way you can easily swap the apps.
     App* appPtr;
 
-    CircleEditor currApp{};
+   // CircleEditor currApp{};
     StartPoint currApp{};
 
     appPtr = &currApp;

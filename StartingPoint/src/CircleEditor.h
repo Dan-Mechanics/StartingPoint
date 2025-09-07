@@ -1,5 +1,4 @@
 #pragma once
-
 #include "App.h"
 
 class CircleEditor : public App {
