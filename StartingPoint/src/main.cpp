@@ -1,16 +1,22 @@
 #include "StartPoint.h"
 #include "CircleEditor.h"
 
+#include "bit_utils.h"
+#include "Data.h"
+
 /// <summary>
 /// https://www.geeksforgeeks.org/cpp/cpp-polymorphism/
 /// </summary>
 int main() {
-    // This way you can easily swap the apps.
+    sayHello();
+    
     App* appPtr;
 
-   // CircleEditor currApp{};
-    StartPoint currApp{};
+    // CircleEditor circleEditor{};
+    // StartPoint startPoint{};
 
-    appPtr = &currApp;
+    Data data{};
+
+    appPtr = &data;
     return appPtr->run();
 }
