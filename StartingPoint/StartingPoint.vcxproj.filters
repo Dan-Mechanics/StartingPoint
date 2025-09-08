@@ -51,10 +51,13 @@
     <ClInclude Include="src\StartPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\bit_utils.h">
+    <ClInclude Include="src\bit_manipulation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Directions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -89,10 +92,13 @@
     <ClCompile Include="src\StartPoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\bit_utils.cpp">
+    <ClCompile Include="src\bit_manipulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Directions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

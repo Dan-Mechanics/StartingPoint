@@ -3,6 +3,7 @@
 #include "imgui.h"
 #include "imgui-SFML.h"
 #include "SFML/Graphics.hpp"
+#include <iostream>
 
 CircleEditor::CircleEditor() = default;
 
@@ -12,11 +13,14 @@ CircleEditor::CircleEditor() = default;
 int CircleEditor::run() const
 {
     sf::RenderWindow window(sf::VideoMode({ 800, 800 }), "Window Title");
-    window.setFramerateLimit(60);
-    window.setVerticalSyncEnabled(true);
+    window.setFramerateLimit(150);
+    window.setVerticalSyncEnabled(false);
 
     if (!ImGui::SFML::Init(window))
         return -1;
+
+    // This is more useful than you would think.
+    std::cout << ImGui::GetVersion() << std::endl;
 
     bool circleExists = true;
     float circleRadius = 200.0f;

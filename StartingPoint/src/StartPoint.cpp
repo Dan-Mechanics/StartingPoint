@@ -14,8 +14,8 @@ StartPoint::StartPoint() = default;
 int StartPoint::run() const {
     sf::RenderWindow window;
     window.create(sf::VideoMode({ 1280, 720 }), "My window");
-    window.setFramerateLimit(60);
-    window.setVerticalSyncEnabled(true);
+    window.setFramerateLimit(150);
+    window.setVerticalSyncEnabled(false);
 
     if (!ImGui::SFML::Init(window))
         return -1;
