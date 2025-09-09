@@ -58,4 +58,4 @@ int32_t bitDouble(int32_t number);
 
 int32_t bitHalf(int32_t number);
 
-bool quickEvenOrOdd(int32_t number);
+bool getEvenOrOdd(int32_t number);

@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\App.h" />
+    <ClInclude Include="src\CircleCollider.h" />
     <ClInclude Include="src\Data.h" />
     <ClInclude Include="src\bit_manipulation.h" />
     <ClInclude Include="src\CircleEditor.h" />
@@ -173,6 +174,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
+    <ClCompile Include="src\CircleCollider.cpp" />
+    <ClCompile Include="src\counter.cpp" />
     <ClCompile Include="src\Data.cpp" />
     <ClCompile Include="src\bit_manipulation.cpp" />
     <ClCompile Include="src\CircleEditor.cpp" />

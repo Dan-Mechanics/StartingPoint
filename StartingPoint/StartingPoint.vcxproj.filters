@@ -60,6 +60,9 @@
     <ClInclude Include="src\Directions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\CircleCollider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="imgui\imgui.cpp">
@@ -99,6 +102,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Directions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CircleCollider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\counter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
