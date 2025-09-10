@@ -69,7 +69,7 @@ int run() {
     Counter counter5 = counter4 * 20;
 
     // You cant do this if you aint got friends.
-    Counter counter5 = 20 * counter4;
+    //Counter counter5 = 20 * counter4;
 
     counter5.print();
 
