@@ -1,3 +1,22 @@
+bro gaat herhalen.
+
+
+de slides komen erop --> alles
+GitHub wordt nog geregeld.
+
+std
+
+array
+
+Students students[50];
+geen enkele bescherming, snelle data structuur.
+
+
+je kan het ook proberen met git installen.
+dus ik moet ergens git installen.
+
+===
+
 note to self: je moet ook de release en debug dlls in de shit hebben.
 so like nice.
 
