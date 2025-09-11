@@ -1,3 +1,24 @@
+c++ setup: it's uphill both ways :)
+
+///
+
+update on the love-hate relationship with all of c++
+
+ok nevermind ive made it work but its quite a lot of work
+to get everything set up because you have to tell the cmake where everything is.
+
+...
+
+i was able to make the startingpoint work from the github however
+i dont have enough experience to add any other files than just running main ( so thats great )
+
+nethertheless, i got my IDE working so #itworksonmymachine
+
+i just DO NOT have enough experience to make all that work yet so lets just
+learn about the coding instead of everything besides the coding.
+
+===
+
 bro gaat herhalen.
 
 
