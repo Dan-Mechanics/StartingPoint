@@ -15,9 +15,9 @@ public:
 	float radius{};
 	int32_t layer{};
 	
-
 	/// <summary>
 	/// Check if there are any commonalities whatsoever.
 	/// </summary>
 	bool checkInteraction(int32_t other) const;
+	static void test();
 };
