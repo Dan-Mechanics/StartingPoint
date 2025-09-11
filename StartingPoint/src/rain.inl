@@ -1,11 +1,9 @@
 #define min(x,y) ((x)<(y)?x:y)
 #define wh(a) ImColor(1.f,1.f,1.f,a)
-void FX(ImDrawList* d, ImVec2 a, ImVec2 b, ImVec2 sz, ImVec2, float t)
-{
+void FX(ImDrawList* d, ImVec2 a, ImVec2 b, ImVec2 sz, ImVec2, float t) {
     static float fl;
     if ((rand() % 500) == 0) fl = t;
-    if ((t - fl) > 0)
-    {
+    if ((t - fl) > 0) {
         auto ft = 0.25f;
         d->AddRectFilled(a, b, wh((ft - (t - fl)) / ft));
     }

@@ -13,8 +13,7 @@ vector<array<int, 4>> st{ { 0, N - 1, 0, 0} };
 #define A st.back()[0]
 #define B st.back()[1]
 #define I st.back()[2]
-void FX2(ImDrawList* d, V2 a, V2 b, V2 s, ImVec4, float t)
-{
+void FX2(ImDrawList* d, V2 a, V2 b, V2 s, ImVec4, float t) {
 	float bs = s.x / N, y, c;
 	for (int i = 0; i < N; i++) {
 		y = a.y + v[i];

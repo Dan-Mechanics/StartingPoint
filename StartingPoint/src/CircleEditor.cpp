@@ -10,8 +10,7 @@ CircleEditor::CircleEditor() = default;
 /// <summary>
 /// https://github.com/VictorGordan/SFML-ImGUI/blob/main/main.cpp
 /// </summary>
-int CircleEditor::run() const
-{
+int CircleEditor::run() const {
     sf::RenderWindow window(sf::VideoMode({ 800, 800 }), "Window Title");
     window.setFramerateLimit(150);
     window.setVerticalSyncEnabled(false);
@@ -37,11 +36,9 @@ int CircleEditor::run() const
     shape.setPosition({ 400, 400 }); // Center circle
 
     sf::Clock deltaClock;
-    while (window.isOpen())
-    {
+    while (window.isOpen()) {
         // Event Polling
-        while (const std::optional event = window.pollEvent())
-        {
+        while (const std::optional event = window.pollEvent()) {
             ImGui::SFML::ProcessEvent(window, *event);
 
             // "close requested" event: we close the window

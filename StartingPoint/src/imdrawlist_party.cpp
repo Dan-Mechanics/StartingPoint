@@ -6,8 +6,7 @@
 #include "sort.inl"
 
 // Shared testbed
-void FxTestBed()
-{
+void FxTestBed() {
     ImGuiIO& io = ImGui::GetIO();
     ImGui::Begin("FX", NULL, ImGuiWindowFlags_AlwaysAutoResize);
     ImVec2 size(320.0f, 180.0f);
@@ -28,8 +27,7 @@ void FxTestBed()
     ImGui::End();
 }
 
-void FxTestBed2()
-{
+void FxTestBed2() {
     ImGuiIO& io = ImGui::GetIO();
     ImGui::Begin("FX2", NULL, ImGuiWindowFlags_AlwaysAutoResize);
     ImVec2 size(320.0f, 180.0f);

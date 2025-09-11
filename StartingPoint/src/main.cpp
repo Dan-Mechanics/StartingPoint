@@ -13,24 +13,24 @@
 // Note to self: friend operators are useful for implementing
 // operators for fields that are normally inaccessible. 
 // Does this mean you can make operators for classes that you
-// yourself did not make ?
+// yourself did not make?
 
 /// <summary>
 /// https://www.geeksforgeeks.org/cpp/cpp-polymorphism/
 /// </summary>
 int main() {
-    CircleCollider groundCircle{ 0.5f, Layer::GROUND };
-    CircleCollider triggerCircle{ 0.5f, Layer::TRIGGER };
+    const CircleCollider groundCircle{ 0.5f, Layer::GROUND };
+    const CircleCollider triggerCircle{ 0.5f, Layer::TRIGGER };
 
     // Something can be both.
-    CircleCollider mixedCircle{ 0.5f, Layer::GROUND | Layer::WATER };
+    const CircleCollider mixedCircle{ 0.5f, Layer::GROUND | Layer::WATER };
 
     std::cout << (groundCircle.checkInteraction(triggerCircle.layer) ? "True" : "False") << std::endl;
     std::cout << (groundCircle.checkInteraction(mixedCircle.layer) ? "True" : "False") << std::endl;
 
     // =============================
 
-    App* appPtr;
+    const App* appPtr;
 
     //CircleEditor app{};
     //Directions app{};

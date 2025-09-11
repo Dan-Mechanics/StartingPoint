@@ -11,9 +11,78 @@ array
 Students students[50];
 geen enkele bescherming, snelle data structuur.
 
+std::vector is basically een shiity list.
+
+
+iterators, wat zijn dat?
+vector<Studrnt>::iterator i = studenten.begin();
+
+iteraotrs snapper de structuur van wat je gebruikt, useful!
+
+
+
+while(i != studenten.end())
+i++
+
+de iterator is een pointer want ->
+
+i->updateECs ( OK DUIDELIJK )
+
+als ik ___ ___ ___ krijg ik lowkey ____\
+
+
+
+it = studenten.erase(it)
+
+dus je hoeft niet reverse loop yipieeee
+dat is zo fucking peak.
+
+
 
 je kan het ook proberen met git installen.
 dus ik moet ergens git installen.
+
+
+
+std::vector<Studrnt>::iterator i = student.begin();
+
+AAA ==> always use auto
+const --> always use const.
+als je het uit wilt tikken om het helder te maken mag dat 
+maar leiver niet.
+
+auto i = students.begin(); // hoera
+
+vector<Student> studenten;
+for(auto& student: studenten)
+student.printecs
+
+kan ook
+
+reference is . en pointer is ->
+iterators is pointers
+
+je kan naar compiler.com kijken naar de shit.
+
+pointer naar pointer is
+i->->updateecs():
+
+
+(*student).updateEC(); ervoor is deference.
+
+
+
+(*student).dwdwd = student->dwdwd();\
+
+waarom kun je niet i->->dwdwd() doen?
+
+nee je kan niet ->-> doen wan tdat is
+
+*(*.). en dat kan niet.
+
+
+
+
 
 ===
 

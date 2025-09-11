@@ -4,8 +4,7 @@
 #include <string>
 #include "Directions.h"
 
-enum CardinalDirections
-{
+enum CardinalDirections {
     NORTH = 0,
     SOUTH = 1,
     EAST = 2,
