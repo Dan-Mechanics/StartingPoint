@@ -1,38 +1,28 @@
+// ====================
+// NOTE (15 SEP): 
+// i forgot how lamdas work 
+// and i forgot how if_stream thing works and i dont have it on the canvas.
+// 
+// would like it if this was feedbacked in the class but no must.
+// ====================
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <functional>
-
-//#include <algorithm>
 #include <cassert>
 #include <complex>
 #include <format>
-///#include <iostream>
 #include <iterator>
 #include <string>
-//#include <vector>
+#include <numeric>
 
-void log(std::vector<std::string>& colors) {
-    auto it = colors.begin();
-    while (it != colors.end()) {
-        std::cout << *it << std::endl;
-        it++;
-    }
+template <typename T>
+void log(const std::vector<T>& vec) {
+    for (auto& element : vec) std::cout << element << std::endl;
 
     std::cout << std::endl;
 }
-
-void log(std::vector<int>& colors) {
-    auto it = colors.begin();
-    while (it != colors.end()) {
-        std::cout << *it << std::endl;
-        it++;
-    }
-
-    std::cout << std::endl;
-}
-
-// NOTE: i forgot how lamdas work and i forgot how if_stream thing works and i dont have it on the canvas.
 
 int main() {
     // gebruik functies uit <algorithm> en <functional> om de volgende opdrachten uit te voeren:
@@ -42,9 +32,9 @@ int main() {
         std::vector<std::string> colors{ "red", "green", "white", "blue", "orange", "green", "orange", "black", "purple" };
         std::sort(colors.begin(), colors.end());
 
-        std::size_t const splitIndex = std::find(colors.begin(), colors.end(), "purple") - colors.begin();
-        std::vector<std::string> pre(colors.begin(), colors.begin() + splitIndex);
-        std::vector<std::string> post(colors.begin() + splitIndex, colors.end());
+        const std::size_t splitIndex = std::find(colors.begin(), colors.end(), "purple") - colors.begin();
+        const std::vector<std::string> pre(colors.begin(), colors.begin() + splitIndex);
+        const std::vector<std::string> post(colors.begin() + splitIndex, colors.end());
 
         log(pre);
         log(post);
@@ -54,8 +44,11 @@ int main() {
     {
         std::vector<std::string> colors{ "red", "green", "white", "blue", "orange", "green", "orange", "black", "purple" };
         
-        auto op = [](std::string str) -> std::string { std::transform(str.begin(), str.end(), str.begin(), ::toupper); return str; };
-        std::ranges::transform(colors.begin(), colors.end(), colors.begin(), op);
+        const auto lambda = [](std::string str) { 
+            std::transform(str.begin(), str.end(), str.begin(), ::toupper);
+            return str; };
+
+        std::ranges::transform(colors.begin(), colors.end(), colors.begin(), lambda);
 
         log(colors);
     }
@@ -72,15 +65,18 @@ int main() {
     // verwijder alle negatieve elementen
     {
         std::vector<double> numbers{ 10, 324422, 6, -23, 234.5, 654.1, 3.1242, -9.23, 635 };
-        //::sort(numbers.begin(), numbers.end());
-       // auto it = std::ranges::find_if(numbers, 0, )
-
+        
+        numbers.erase(std::remove_if(numbers.begin(),
+            numbers.end(), [](const double num) { return num < 0; }));
+        
+        log(numbers);
     }
 
     // bepaal voor alle elementen of ze even of oneven zijn
     {
         std::vector numbers{ 10, 324422, 6, -23, 234, 654, 3, -9, 635 };
-        std::ranges::transform(numbers.begin(), numbers.end(), numbers.begin(), [](int num) { num &= 1; return !num; });
+        std::ranges::transform(numbers.begin(), numbers.end(), numbers.begin(),
+            [](int num) { num &= 1; return !num; });
 
         // 1 = EVEN, 0 = ODD
         log(numbers);
@@ -88,7 +84,12 @@ int main() {
 
     // bepaal de som, het gemiddelde, en het product van alle getallen te berekenen
     {
-        std::vector<double> numbers{ 10, 324422.1, 6, -23, 234.5, 654.1, 3.1242, -9.23, 635 };
+        const std::vector<double> numbers{ 10, 324422.1, 6, -23, 234.5, 654.1, 3.1242, -9.23, 635 };
+        const double sum = std::accumulate(numbers.begin(), numbers.end(), 0.0);
+        const double av = sum / numbers.size();
+        const double product = std::accumulate(numbers.begin(), numbers.end(), 1.0, std::multiplies<double>());
+
+        std::cout << sum << " " << av << " " << product << std::endl;
     }
 
     return 0;

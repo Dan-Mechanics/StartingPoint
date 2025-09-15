@@ -1,2 +1,155 @@
 ﻿  main.cpp
-  StartingPoint.vcxproj -> C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\x64\Debug\StartingPoint.exe
+C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22): error C3889: call to object of class type 'std::ranges::_Transform_fn': no matching call operator found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\algorithm(3867,75):
+      could be 'std::ranges::in_out_result<_It,_Out> std::ranges::_Transform_fn::operator ()(_It,_Se,_Out,_Fn,_Pj)'
+          C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+          the associated constraints are not satisfied
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\algorithm(3866,22):
+              the concept 'std::indirectly_writable<std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::basic_string<char,std::char_traits<char>,std::allocator<char>>>' evaluated to false
+          with
+          [
+              _Ty=std::string
+          ]
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                  binary '=': no operator found which takes a left-hand operand of type 'const std::basic_string<char,std::char_traits<char>,std::allocator<char>>' (or there is no acceptable conversion)
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(1453,32):
+                      could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
+          with
+          [
+              _Elem=char
+          ]
+                          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                          'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)': cannot convert 'this' pointer from 'const std::basic_string<char,std::char_traits<char>,std::allocator<char>>' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &'
+          with
+          [
+              _Elem=char
+          ]
+                              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                              Conversion loses qualifiers
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(1450,19):
+                      or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::nullptr_t)'
+                          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                          'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::nullptr_t)': cannot convert 'this' pointer from 'const std::basic_string<char,std::char_traits<char>,std::allocator<char>>' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &'
+                              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                              Conversion loses qualifiers
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(1445,32):
+                      or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+                          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                          'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )': cannot convert 'this' pointer from 'const std::basic_string<char,std::char_traits<char>,std::allocator<char>>' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &'
+          with
+          [
+              _Elem=char
+          ]
+                              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                              Conversion loses qualifiers
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(1394,32):
+                      or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+                          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                          'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)': cannot convert 'this' pointer from 'const std::basic_string<char,std::char_traits<char>,std::allocator<char>>' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &'
+                              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                              Conversion loses qualifiers
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(1345,32):
+                      or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
+          with
+          [
+              _Elem=char
+          ]
+                          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                          'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)': cannot convert 'this' pointer from 'const std::basic_string<char,std::char_traits<char>,std::allocator<char>>' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &'
+          with
+          [
+              _Elem=char
+          ]
+                              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                              Conversion loses qualifiers
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(1224,32):
+                      or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
+                          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                          'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)': cannot convert 'this' pointer from 'const std::basic_string<char,std::char_traits<char>,std::allocator<char>>' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &'
+                              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                              Conversion loses qualifiers
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xstring(1440,32):
+                      or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =<std::basic_string<char,std::char_traits<char>,std::allocator<char>>,0>(const _StringViewIsh &)'
+          with
+          [
+              _StringViewIsh=std::basic_string<char,std::char_traits<char>,std::allocator<char>>
+          ]
+                          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                          'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =<std::basic_string<char,std::char_traits<char>,std::allocator<char>>,0>(const _StringViewIsh &)': cannot convert 'this' pointer from 'const std::basic_string<char,std::char_traits<char>,std::allocator<char>>' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &'
+          with
+          [
+              _StringViewIsh=std::basic_string<char,std::char_traits<char>,std::allocator<char>>
+          ]
+                              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                              Conversion loses qualifiers
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(913,5):
+                      while trying to match the argument list '(const std::basic_string<char,std::char_traits<char>,std::allocator<char>>, std::basic_string<char,std::char_traits<char>,std::allocator<char>>)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\algorithm(3884,97):
+      or       'std::ranges::in_out_result<conditional<std::ranges::borrowed_range<_Rng>,unknown-type,std::ranges::dangling>::type,_Out> std::ranges::_Transform_fn::operator ()(_Rng &&,_Out,_Fn,_Pj)'
+          C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+          Failed to specialize function template 'std::ranges::in_out_result<conditional<std::ranges::borrowed_range<_Rng>,unknown-type,std::ranges::dangling>::type,_Out> std::ranges::_Transform_fn::operator ()(_Rng &&,_Out,_Fn,_Pj)'
+              C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+              With the following template arguments:
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Rng=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Out=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Fn=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Pj=main::<lambda_1>'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(5015,53):
+              'std::ranges::borrowed_iterator_t': the associated constraints are not satisfied
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(4178,27):
+                  the concept 'std::ranges::range<std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>' evaluated to false
+          with
+          [
+              _Ty=std::string
+          ]
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(2690,17):
+                      call to object of class type 'std::ranges::_Begin::_Cpo': no matching call operator found
+                          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(2590,61):
+                          could be 'auto std::ranges::_Begin::_Cpo::operator ()(_Ty &&) noexcept(<expr>)'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(4179,5):
+              see declaration of 'std::ranges::borrowed_iterator_t'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\algorithm(3901,83):
+      or       'std::ranges::in_in_out_result<_It1,_It2,_Out> std::ranges::_Transform_fn::operator ()(_It1,_Se1,_It2,_Se2,_Out,_Fn,_Pj1,_Pj2)'
+          C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+          'std::ranges::in_in_out_result<_It1,_It2,_Out> std::ranges::_Transform_fn::operator ()(_It1,_Se1,_It2,_Se2,_Out,_Fn,_Pj1,_Pj2)': expects 8 arguments - 4 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\algorithm(3931,13):
+      or       'std::ranges::in_in_out_result<conditional<std::ranges::borrowed_range<_Rng>,unknown-type,std::ranges::dangling>::type,conditional<std::ranges::borrowed_range<_Rng2>,unknown-type,std::ranges::dangling>::type,_Out> std::ranges::_Transform_fn::operator ()(_Rng1 &&,_Rng2 &&,_Out,_Fn,_Pj1,_Pj2)'
+          C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+          Failed to specialize function template 'std::ranges::in_in_out_result<conditional<std::ranges::borrowed_range<_Rng>,unknown-type,std::ranges::dangling>::type,conditional<std::ranges::borrowed_range<_Rng2>,unknown-type,std::ranges::dangling>::type,_Out> std::ranges::_Transform_fn::operator ()(_Rng1 &&,_Rng2 &&,_Out,_Fn,_Pj1,_Pj2)'
+              C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+              With the following template arguments:
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Rng1=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Rng2=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Out=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Fn=main::<lambda_1>'
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Pj1=std::identity'
+                  C:\Users\Dan-Mechanics\Development\GITHUB\StartingPoint\StartingPoint\src\main.cpp(49,22):
+                  '_Pj2=std::identity'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(5015,53):
+              'std::ranges::borrowed_iterator_t': the associated constraints are not satisfied
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(4178,27):
+                  the concept 'std::ranges::range<std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>>' evaluated to false
+          with
+          [
+              _Ty=std::string
+          ]
+                      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(2690,17):
+                      call to object of class type 'std::ranges::_Begin::_Cpo': no matching call operator found
+                          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(2590,61):
+                          could be 'auto std::ranges::_Begin::_Cpo::operator ()(_Ty &&) noexcept(<expr>)'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(4179,5):
+              see declaration of 'std::ranges::borrowed_iterator_t'
+  
