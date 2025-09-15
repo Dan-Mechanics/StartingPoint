@@ -40,7 +40,7 @@ int main() {
         std::vector<std::string> colors{ "red", "green", "white", "blue", "orange", "green", "orange", "black", "purple" };
         
         const auto lambda = [](std::string str) { 
-            std::transform(str.begin(), str.end(), str.begin(), ::toupper);
+            transform(str.begin(), str.end(), str.begin(), ::toupper);
             return str; };
 
         std::ranges::transform(colors.begin(), colors.end(), colors.begin(), lambda);
