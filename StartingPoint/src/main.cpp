@@ -1,11 +1,3 @@
-// ====================
-// NOTE (15 SEP): 
-// i forgot how lamdas work 
-// and i forgot how if_stream thing works and i dont have it on the canvas.
-// 
-// would like it if this was feedbacked in the class but no must.
-// ====================
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -24,6 +16,9 @@ void log(const std::vector<T>& vec) {
     std::cout << std::endl;
 }
 
+/// <summary>
+/// Need feedback for this.
+/// </summary>
 int main() {
     // gebruik functies uit <algorithm> en <functional> om de volgende opdrachten uit te voeren:
 
