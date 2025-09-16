@@ -27,6 +27,7 @@ int main() {
         std::vector<std::string> colors{ "red", "green", "white", "blue", "orange", "green", "orange", "black", "purple" };
         std::sort(colors.begin(), colors.end());
 
+        // is this GOOD ?
         const std::size_t splitIndex = std::find(colors.begin(), colors.end(), "purple") - colors.begin();
         const std::vector<std::string> pre(colors.begin(), colors.begin() + splitIndex);
         const std::vector<std::string> post(colors.begin() + splitIndex, colors.end());
