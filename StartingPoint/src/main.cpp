@@ -4,6 +4,11 @@
 #include <functional>
 #include <numeric>
 
+#include "Texture.h"
+
+// huiswerk: conways game of life without nested loops or arrays[][], dus wel vector?
+// all this code will go skibidi online yo.
+
 template <typename T>
 void log(const std::vector<T>& vec) {
     for (auto& element : vec) std::cout << element << std::endl;
@@ -19,6 +24,10 @@ void log(const std::vector<T>& vec) {
 /// </summary>
 int main() {
     // gebruik functies uit <algorithm> en <functional> om de volgende opdrachten uit te voeren:
+
+
+    Texture t1{ "orion", 1024 };
+    return 0;
 
     // splits de vector in 2 nieuwe vectoren: 1 met alles wat alfabetisch voor 'purple' komt, 1 met alles er na
     {

@@ -171,6 +171,7 @@
     <ClInclude Include="imgui\imstb_truetype.h" />
     <ClInclude Include="src\Directions.h" />
     <ClInclude Include="src\StartPoint.h" />
+    <ClInclude Include="src\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
@@ -188,6 +189,7 @@
     <ClCompile Include="src\Directions.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\StartPoint.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\rain.inl" />
