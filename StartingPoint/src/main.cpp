@@ -15,6 +15,7 @@ void log(const std::vector<T>& vec) {
 /// I THINK FEEDBACK FOR THIS WOULD BE USEFUL.
 /// IT'S CONFUSING BECAUSE THERE ARE SO MANY WAYS
 /// TO SOLVE THE PROBLEMS.
+///  - Tim
 /// </summary>
 int main() {
     // gebruik functies uit <algorithm> en <functional> om de volgende opdrachten uit te voeren:
@@ -22,21 +23,35 @@ int main() {
     // splits de vector in 2 nieuwe vectoren: 1 met alles wat alfabetisch voor 'purple' komt, 1 met alles er na
     {
         const std::vector<std::string> colors{ "red", "green", "white", "blue", "orange", "green", "orange", "black", "purple" };
-        std::sort(colors.begin(), colors.end());
+        //std::sort(colors.begin(), colors.end());
+        //const auto splitIndex = std::find(colors.begin(), colors.end(), "purple") - colors.begin();
+        //const std::vector<std::string> pre(colors.begin(), colors.begin() + splitIndex);
+        //const std::vector<std::string> post(colors.begin() + splitIndex, colors.end());
 
-        // CAN THIS BE MADE EVEN MORE CONCISE?
-        const auto splitIndex = std::find(colors.begin(), colors.end(), "purple") - colors.begin();
-        const std::vector<std::string> pre(colors.begin(), colors.begin() + splitIndex);
-        const std::vector<std::string> post(colors.begin() + splitIndex, colors.end());
+        auto before = std::vector<std::string>{};
+        auto after = std::vector<std::string>{};
 
-        log(pre);
-        log(post);
+        std::copy_if(begin(colors), end(colors), std::back_inserter(before), [&](const auto& c) {return c > "purple"; });
+        std::copy_if(begin(colors), end(colors), std::back_inserter(after), [&](const auto& c) {return c < "purple"; });
+
+        // THIS IS THE BEST. WE NEED TO LEARN STL BECAUSE BETTER AT BIGGER SCALES.
+        std::ranges::copy_if(colors, std::back_inserter(before), [&](const auto& c) {return c > "purple"; });
+        std::ranges::copy_if(colors, std::back_inserter(after), [&](const auto& c) {return c < "purple"; });
+
+        auto beforePurple = std::bind(std::greater(), "purple", std::placeholders::_1);
+        std::copy_if(begin(colors), end(colors), std::back_inserter(before), beforePurple);
+
+        auto afterPurple = std::bind(std::less(), "purple", std::placeholders::_1);
+        std::copy_if(begin(colors), end(colors), std::back_inserter(before), afterPurple);
+
+        log(before);
+        log(after);
     }
 
     // maak alle elementen UPPERCASE
     {
         std::vector<std::string> colors{ "red", "green", "white", "blue", "orange", "green", "orange", "black", "purple" };
-        
+
         // YOU CAN USE A LAMBDA HERE OR INLINE IT.
         std::ranges::transform(colors.begin(), colors.end(), colors.begin(), [](auto& str) {
             std::transform(str.begin(), str.end(), str.begin(), ::toupper);
@@ -58,10 +73,10 @@ int main() {
     // verwijder alle negatieve elementen
     {
         std::vector<double> numbers{ 10, 324422, 6, -23, 234.5, 654.1, 3.1242, -9.23, 635 };
-        
+
         numbers.erase(std::remove_if(numbers.begin(),
             numbers.end(), [](const auto num) { return num < 0; }));
-        
+
         log(numbers);
     }
 
@@ -78,7 +93,7 @@ int main() {
     // bepaal de som, het gemiddelde, en het product van alle getallen te berekenen
     {
         const std::vector<double> numbers{ 10, 324422.1, 6, -23, 234.5, 654.1, 3.1242, -9.23, 635 };
-        
+
         const auto sum = std::accumulate(numbers.begin(), numbers.end(), 0.0);
         const auto av = sum / numbers.size();
         const auto product = std::accumulate(numbers.begin(), numbers.end(), 1.0, std::multiplies<double>());
